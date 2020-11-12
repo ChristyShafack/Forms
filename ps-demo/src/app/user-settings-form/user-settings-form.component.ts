@@ -8,13 +8,16 @@ import { UserSettings } from '../data/user-settings';
   styleUrls: ['./user-settings-form.component.css']
 })
 export class UserSettingsFormComponent implements OnInit {
-  userSettings : UserSettings  = {
+  originalUserSettings : UserSettings  = {
     name: 'Milton',
     emailOffers: true,
     interfaceStyle: 'dark',
     subscriptionType: 'Annual',
     notes:'some notes...'
   }
+
+  //making a copy of the properties of the user settings form
+  userSettings : UserSettings  = { ...this.originalUserSettings };
   
   constructor() { }
 
