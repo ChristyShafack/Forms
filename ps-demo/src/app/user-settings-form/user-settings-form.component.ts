@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSettings } from '../data/user-settings';
 import { NgForm, NgModel } from '@angular/forms';
+
 import { DataService } from '../data/data.service';
 import { Observable } from 'rxjs';
+import { UserSettings } from '../data/user-settings';
 
 @Component({
   selector: 'app-user-settings-form',
@@ -18,6 +19,8 @@ export class UserSettingsFormComponent implements OnInit {
     subscriptionType: null,
     notes: null
   };
+
+  singleModel1="on";
 
   userSettings : UserSettings = { ...this.originalUserSettings };
   postError = false;
