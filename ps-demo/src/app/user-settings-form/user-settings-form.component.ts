@@ -46,16 +46,16 @@ export class UserSettingsFormComponent implements OnInit {
   onSubmit(form: NgForm) {
     console.log('in onSubmit: ', form.valid);
 
-    if (form.valid) {
-      this.dataService.postUserSettingsForm(this.userSettings).subscribe(
-        result => console.log('success: ', result),
-        error => this.onHttpError(error)
-      );
-    }
-    else {
-      this.postError = true;
-      this.postErrorMessage = "Please fix the above errors"
-    }
+    // if (form.valid) {
+    //   this.dataService.postUserSettingsForm(this.userSettings).subscribe(
+    //     result => console.log('success: ', result),
+    //     error => this.onHttpError(error)
+    //   );
+    // }
+    // else {
+    //   this.postError = true;
+    //   this.postErrorMessage = "Please fix the above errors"
+    // }
   }
 
 }
